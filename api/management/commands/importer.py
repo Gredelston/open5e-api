@@ -734,6 +734,8 @@ class Importer:
             i.plus_max = armor_json["plus_max"]
         if "strength_requirement" in armor_json:
             i.strength_requirement = armor_json["strength_requirement"]
+        if "weight" in armor_json:
+            i.weight = armor_json["weight"]
         result = self._determine_import_result(new, exists)
         if result is not ImportResult.SKIPPED:
             i.save()
